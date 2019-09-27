@@ -1,0 +1,292 @@
+/*font-family: 'Open Sans', sans-serif;*/
+
+/*incio base*/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+}
+header{
+	background-color: #2e64a1;
+	padding: 1em 0;
+}
+header h1{
+	color: white;
+	font-size: 2.5em;
+	font-family: italic;
+	font-weight: 100; /*peso de la letra*/
+	display: inline-block; /*va a ser linea la caja coloca en la misma linea logo y texto*/
+	position: relative;
+	bottom: 0.8em;
+} 
+nav{
+	background-color: #6da9ed;
+	margin-bottom: 2em; /*para separar lo que venga debajo del menù*/
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0; /*porque va pegado a header*/
+}
+nav ul li{
+	display: inline-block;
+	width: 20%;
+}
+nav ul li a{
+	color: white;
+	text-decoration:none;
+	text-align: center;
+	padding: 0.2em 0.4em;
+	display: block;
+	transition: background 0.5s ease;
+}
+nav ul li a:hover{
+	background-color: rgba(0,0,0,0.3);
+
+}
+nav ul li a.activo{
+	background-color: #4c76a5;
+}
+
+footer{
+	background-color: #ccc;
+	clear: both;
+	color: #333;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: center;
+	padding: 3em 0;
+	margin-top: 2em;
+}
+footer p{
+	margin: 0;
+}
+.holder{  /*creamos una caja para ubicar nuestro contenido en el centro*/
+	width: 960px;
+	margin: 0 auto;
+	/*background-color: red; para entender como funciona la clase creada HOLDER*/
+}
+h2{
+	font-weight: 400;
+	color: #2e64a1;
+	margin: 0 0 1em; /*paràmetros: arriba-laterales-abajo*/
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+/*fin base*/
+
+
+/*inicio home*/
+.homeimg{
+	margin-bottom: 1.5em;
+}
+.columnas{
+	overflow: hidden;
+}
+.bienvenidos{
+	width: 75%;
+	padding-right: 2em; /*separar caja div*/
+}
+.testimonios{
+	width: 25%;
+}
+.bienvenidos,.testimonios{ 
+	box-sizing: border-box; /*mantiene tamaño de la caja y acomoda los elementos sin alterar tamaño*/
+}
+.bienvenidos p{ /*compuesto: clase- bienvenidos . etiqueta - p*/
+	font-size: 1.3em;
+}
+.testimonio{
+	background-color: #ddd;
+	padding: 1em;
+}
+.testimonio .cita{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.4em;
+	display: block; /*genera que este elemento sea un bloque, por ejemplo hace enter entre lineas*/
+}
+.testimonio .autor{
+	font-size: 0.7em;
+	text-align: center;
+	margin: 1em 0;
+	display: block; /*genera que este elemento sea un bloque, en este caso genera centro por align*/
+}
+/*fin home*/
+
+
+/*inicio nosotros*/
+
+.historia p{
+	font-size: 0.8em;
+}
+.personas{
+	overflow: hidden; /*respeta margen del pie respecto de section*/
+}
+.persona{
+	width: 18%;
+	border: 1px solid #ddd;
+	border-radius: 0.25em;
+	float: left;
+	margin-left: 2.25%;
+	box-sizing: border-box;
+	/*background-color: pink; */
+}
+.persona figure{
+	margin: 0.8em 0 1em; /*acomodamos la imagen por el margen de etiqueta FIGURE*/
+	text-align: center; /*centar imagenes dentro de caja (para etiguetas FIGURE ò IMG) */
+}
+.persona figure img{
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.persona h5,.persona h6{
+	text-align: center;
+	color: #2e64a1;
+	font-weight: normal;
+	margin: 0;
+}
+.persona h5{
+	font-size:  0.9em;
+}
+.persona h6{
+	font-size: 0.8em;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+.persona p{
+	font-size: 0.7em;
+	color: #444;
+	margin: 0 1em 1em;
+}
+/*veàmos una seudo-clase*/
+.persona:first-child{ /*es para correr margen izquierdo de la primera etiqueta hijo a la izquierda*/
+	margin-left: 0; /*este atributo se usa solo para primer ò ultimo hijo- first or last child*/
+} /*ò se puede agregar una clase a html caja padre y en css colocar margin 0*
+
+/*fin nosotros*/
+
+/*inicio servicios*/
+.servicio{
+	border: 1px solid #ddd;
+	border-radius: 0.7em;
+	margin: 1em 0;
+	padding: 1em;
+	overflow: hidden; /*corrige superposiciòn de lìneas*/
+	/*la caja de srvicios al no tener alto no interpreta elementos que posee , se adpata a otros elementos*/ 
+	/*hidden, muestra elemntos "ocultos"*/
+}
+.servicio figure img{
+border-radius: 0.8em;
+}
+.servicio .info{
+	width: 75%;
+}
+.servicio .info h4{
+	color: #2e64a1;
+	font-size: 1.2em;
+	font-style:  italic;
+	font-weight: 500;
+	margin: 0 0 1em;
+	border-bottom: 1px solid #2e64a1;
+	padding-bottom: 0.5em;
+}
+.servicio .info .p{
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+/*veamos otras seudo clases, las identificamos con : */
+.servicio:nth-child(odd) figure{ 
+	float: left;
+	margin: 0 1em 0 0;
+}
+.servicio:nth-child(odd) .info{
+	float: right;
+}
+.servicio:nth-child(even) figure{
+	float: right;
+	margin: 0 0 0 1em;
+}
+.servicio:nth-child(even) .info{
+	float: left;
+}
+/* odd: impar even: par;
+entonces: arranca desde el primer hijo (en este caso prime DIV en HTML)
+ y siempre cuenta desde 0 siendo PAR y luego 1 siendo IMPAR y siguientes..*/
+
+
+/*fin servicios*/
+
+/*INICIO GALERIA*/
+.galeria .foto{
+	/*display: inline-block;*/
+	float: left;
+	width: 18%;
+	margin: 1em 0 1em 2.5%;
+	border: 1px solid #ddd;
+	padding: 0.3em;
+	box-sizing: border-box;
+}
+.galeria .foto img{
+	width: 100%; /*quedando asi la imagen dentro de la caja, siempre proporcional como SHIFT*/
+	display: block;  /*respeta el padding*/ 
+}
+.galeria .foto:nth-child(5n+1){ /*Xn : cantifdad de hijos +1 : posicion en el contenedor */
+	margin-left: 0;
+	border-color: red;
+}
+/*FIN GALERIA*/
+
+/*inicio contacto*/
+.columna{
+	width: 50%;
+	padding: 0 0.625em;
+	box-sizing: border-box;
+	/*background-color: red;*/
+}
+.columna.left{ /*se declara juntos porque es un elemento de tiene dos clases, queremos que impacte en esa ruta */
+	border-right: 1px solid #ddd;
+}
+.columna.right p{
+	font-size: 0.8em;
+}
+.columna.right ul li{
+	font-size: 0.7em;
+}
+.formulario label{
+	width: 22%;
+	vertical-align: top;
+	/*display: inline-block;*/
+	display: block;
+}
+.formulario input,
+.formulario textarea{
+	background-color: #ddd;
+	border-radius: 5px;
+	border: 1px solid #999;
+	font-size: 0.8em;
+	padding: 0.4em 0.6em;
+	width: 90%;
+}
+.formulario textarea{
+	height: 10em;
+	resize: none; /*bloquea que caja de textare se mueva*/
+}
+.formulario input[type="submit"]{
+	width: auto; /* auto bloquea lo declarado arriba en los input*/
+	background-color: #6da9ed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	color:white;
+	font-size: 1em;
+}
+.formulario .acciones{
+	text-align: right;
+}
+
+
+/*fin contacto*/
